@@ -71,13 +71,15 @@ export default function CreateTicket({ setShowAddTicket }) {
                 </div>
                 <button
                     onClick={() => {
+                        setShowAddTicket(false)
+                        if (!title || !description) return
+
                         addTicket({
                             id: uuidv4(),
                             title,
                             description,
                             tasks,
                         })
-                        setShowAddTicket(false)
                     }}
                 >
                     Create task
