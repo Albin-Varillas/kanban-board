@@ -17,6 +17,12 @@
 
     &-heading {
         flex: 1;
+        display: flex;
+        gap: 5px;
+
+        &-chevron {
+            display: none;
+        }
     }
 
     button {
@@ -26,5 +32,26 @@
         padding: 15px 20px;
         cursor: pointer;
         border-radius: 999px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding: 10px 24px;
+
+        &-logo-container {
+            display: none;
+        }
+
+        &-heading-chevron {
+            display: block;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        button {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
     }
 }

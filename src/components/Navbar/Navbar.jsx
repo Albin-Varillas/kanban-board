@@ -1,5 +1,6 @@
 import React from "react"
 import { useProject } from "../../context/ProjectContext"
+import { ChevronDown } from "react-feather"
 
 import "./Navbar.scss"
 
@@ -12,6 +13,9 @@ export default function Navbar({ setShowAddTicket }) {
             </div>
             <div className="navbar-heading">
                 <h2>{currentProject.title}</h2>
+                <div className="navbar-heading-chevron">
+                    <ChevronDown />
+                </div>
             </div>
             <button onClick={() => setShowAddTicket(true)}>
                 Add new ticket
