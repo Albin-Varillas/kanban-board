@@ -4,7 +4,7 @@ import { ChevronDown } from "react-feather"
 
 import "./Navbar.scss"
 
-export default function Navbar({ setShowAddTicket }) {
+export default function Navbar({ setShowAddTicket, setShowDropDown }) {
     const { currentProject } = useProject()
     return (
         <nav className="navbar">
@@ -13,7 +13,10 @@ export default function Navbar({ setShowAddTicket }) {
             </div>
             <div className="navbar-heading">
                 <h2>{currentProject.title}</h2>
-                <div className="navbar-heading-chevron">
+                <div
+                    className="navbar-heading-chevron"
+                    onClick={() => setShowDropDown(true)}
+                >
                     <ChevronDown />
                 </div>
             </div>

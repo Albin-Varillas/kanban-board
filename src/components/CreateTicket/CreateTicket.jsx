@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./CreateTicket.scss"
 import { useProject } from "../../context/ProjectContext"
 import { v4 as uuidv4 } from "uuid"
+import { X } from "react-feather"
 
 export default function CreateTicket({ setShowAddTicket }) {
     const { addTicket } = useProject()
@@ -14,10 +15,12 @@ export default function CreateTicket({ setShowAddTicket }) {
         <div className="modal">
             <div className="modal-card">
                 <h3 className="heading-l">Add New Task</h3>
-
-                <button onClick={() => setShowAddTicket(false)}>
-                    close modal
-                </button>
+                <div
+                    className="modal-card-close-btn"
+                    onClick={() => setShowAddTicket(false)}
+                >
+                    <X />
+                </div>
 
                 <div className="modal-input-group">
                     <label htmlFor="title" className="body-m">

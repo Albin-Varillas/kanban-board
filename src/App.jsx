@@ -6,9 +6,14 @@ import { useState } from "react"
 
 export default function App() {
     const [showAddTicket, setShowAddTicket] = useState(false)
+    const [showDropDown, setShowDropDown] = useState(false)
+
     return (
         <div className="App">
-            <Navbar setShowAddTicket={setShowAddTicket} />
+            <Navbar
+                setShowAddTicket={setShowAddTicket}
+                setShowDropDown={setShowDropDown}
+            />
             <main>
                 <SideNav />
                 <Board />
@@ -16,6 +21,7 @@ export default function App() {
             {showAddTicket && (
                 <CreateTicket setShowAddTicket={setShowAddTicket} />
             )}
+            {showDropDown && <p>hej</p>}
         </div>
     )
 }

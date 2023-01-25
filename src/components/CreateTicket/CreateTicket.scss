@@ -12,9 +12,17 @@
         width: min(100%, 400px);
         background-color: var(--bg-gray);
         border-radius: 6px;
+        position: relative;
 
         h3 {
             margin-bottom: 20px;
+        }
+
+        &-close-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 32px;
+            right: 32px;
         }
     }
 
