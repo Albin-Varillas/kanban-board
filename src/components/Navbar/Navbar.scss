@@ -8,6 +8,15 @@
     &-logo-container {
         width: 100%;
         max-width: 280px;
+        display: flex;
+        align-items: center;
+
+        gap: 4px;
+
+        svg {
+            width: 36px;
+            height: 36px;
+        }
 
         h1 {
             color: var(--text-lines);

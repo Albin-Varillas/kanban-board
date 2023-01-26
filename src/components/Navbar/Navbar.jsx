@@ -1,6 +1,7 @@
 import React from "react"
 import { useProject } from "../../context/ProjectContext"
 import { ChevronDown } from "react-feather"
+import { Menu } from "react-feather"
 
 import "./Navbar.scss"
 
@@ -9,6 +10,7 @@ export default function Navbar({ setShowAddTicket, setShowDropDown }) {
     return (
         <nav className="navbar">
             <div className="navbar-logo-container">
+                <Menu />
                 <h1>Kanban</h1>
             </div>
             <div className="navbar-heading">
