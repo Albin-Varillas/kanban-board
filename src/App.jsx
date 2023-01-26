@@ -3,6 +3,7 @@ import SideNav from "./components/SideNav/SideNav"
 import Navbar from "./components/Navbar/Navbar"
 import CreateTicket from "./components/CreateTicket/CreateTicket"
 import { useState } from "react"
+import ProjectsDropDown from "./components/ProjectsDropDown/ProjectsDropDown"
 
 export default function App() {
     const [showAddTicket, setShowAddTicket] = useState(false)
@@ -21,7 +22,9 @@ export default function App() {
             {showAddTicket && (
                 <CreateTicket setShowAddTicket={setShowAddTicket} />
             )}
-            {showDropDown && <p>hej</p>}
+            {showDropDown && (
+                <ProjectsDropDown setShowDropDown={setShowDropDown} />
+            )}
         </div>
     )
 }
